@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -5,8 +6,11 @@
   font-family: sans-serif;
 }
 
-body {
-  background: linear-gradient(45deg, #f06291, #fffde7);
+.body {
+  background: linear-gradient(45deg, #00f2ff, #ffffff);
+}
+.body.dark {
+  background: linear-gradient(45deg, #007749, #00ff9d);
 }
 
 .container {
@@ -90,22 +94,21 @@ body {
   z-index: 1;
 }
 .themeToggler::before {
-  content: "";
+  content: "🌙";
   position: absolute;
   height: 30px;
   width: 30px;
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 30%;
-  background-color: #333;
   z-index: -1;
 }
-.themeToggler .themeToggler .active {
-  background-color: white;
+.themeToggler.active {
+  content: "";
   color: white;
 }
-.themeToggler .themeToggler .active::before {
-  background-color: white;
+.themeToggler.active::before {
+  content: "💡";
   color: white;
 }
 

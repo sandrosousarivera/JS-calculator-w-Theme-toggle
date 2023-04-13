@@ -37,13 +37,16 @@ buttons.forEach((item)=>{
 
 })
 
-const themeTogglerButton = document.querySelector(".themeToggler")
-const calculator = document.querySelector(".calculator")
+const themeTogglerButton = document.querySelector(".themeToggler");
+const bodyBackground = document.querySelector(".body")
+const calculator = document.querySelector(".calculator");
+const toggleIcon = document.querySelector(".togglerIcon");
 let isDark=true;
 themeTogglerButton.onclick=()=>{
 
     calculator.classList.toggle("dark")
     themeTogglerButton.classList.toggle("active")
+    bodyBackground.classList.toggle("dark")
     isDark=!isDark
 
 };
